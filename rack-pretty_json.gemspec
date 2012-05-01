@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "rack-pretty_json"
   gem.require_paths = ["lib"]
   gem.version       = Rack::PrettyJson::VERSION
+
+  gem.add_dependency "yajl-ruby", "~> 1.1.0"
 end
