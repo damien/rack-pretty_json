@@ -1,9 +1,6 @@
 require "yajl"
 require "rack"
-
-require "rack-pretty_json/version"
-
-require 'yaml'
+require "rack/pretty_json/version"
 
 module Rack
 

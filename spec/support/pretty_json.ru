@@ -1,7 +1,7 @@
 $:.unshift File.expand_path("../../../lib/", __FILE__)
 
 require "rack"
-require "rack-pretty_json"
+require "rack/pretty_json"
 require "stringio"
 
 module TestApp
