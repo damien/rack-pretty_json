@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["damien@mindglob.com"]
   gem.description   = %q{Pretty JSON for pretty people}
   gem.summary       = %q{Rack::PrettyJSON reformats JSON responses for easier readability.}
-  gem.homepage      = "htts://www.github.com/damien/rack-pretty_json/"
+  gem.homepage      = "https://www.github.com/damien/rack-pretty_json/"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
