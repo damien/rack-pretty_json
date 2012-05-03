@@ -23,7 +23,7 @@ module Rack
       query_hash = Rack::Utils.parse_nested_query(env['QUERY_STRING'])
 
       # If this is a JSON response..
-      if headers['Content-Type'] == 'application/json'
+      if headers['Content-Type'].to_s.scan('application/json').size > 0
         # AND if ANY of the following are true:
         # - we've been configured to process all JSON responses
         # - pretty json format has been requested
