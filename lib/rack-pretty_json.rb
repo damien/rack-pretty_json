@@ -10,8 +10,8 @@ module Rack
   class PrettyJSON
 
     # You can customize the behavior of `Rack::PrettyJSON` with the options hash.
-    # @param #call app A Rack middleware or endpoint
-    # @param [Hash<Symbol => Boolean, String] options a configuration hash
+    # @param [#call] app A Rack middleware or endpoint
+    # @param [Hash<Symbol => Boolean, String>] options a configuration hash
     def initialize(app, options = {})
       @app = app
       @options = {
