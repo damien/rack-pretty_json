@@ -44,6 +44,8 @@ hash:
 
 * Currently, `Rack::PrettyJSON` will only handle GET requests. Support
   for JSON responses resulting from HTTP POST requests is planned.
+* RSpec coverage is in progress. You can find a simple test app and
+  rackup file in the `spec/support` directory.
 
 ## Contributing
 
