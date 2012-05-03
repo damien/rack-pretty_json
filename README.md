@@ -20,8 +20,30 @@ Or install it yourself as:
 
 Simply `require 'rack/pretty_json'` and add `Rack::PrettyJSON` to your
 list of Rack middleware. `Rack::PrettyJSON` will look for any JSON
-encoded responses from your application and pipe them through the YAJL
-JSON parser to respond with nicely formatted JSON text.
+encoded responses from your application and pretty them up for you!
+
+## Configuration
+
+You can customize the behavior of `Rack::PrettyJSON` by passing it a
+configuration hash in your rackup file or middleware configuration.
+
+    use Rack::PrettyJSON,
+      :always => false,
+      :with_paramater => 'pretty'
+
+Here's a list of the things you can tweak through the configuration
+hash:
+
+* `:always` (boolean, default: false) - if set to true, process all JSON
+  responses
+* `:with_paramater` (string, default: 'pretty'): When present as a key in
+  a HTTP request's GET query hash, any resulting JSON responses will be
+  processed.
+
+## Notes
+
+* Currently, `Rack::PrettyJSON` will only handle GET requests. Support
+  for JSON responses resulting from HTTP POST requests is planned.
 
 ## Contributing
 
