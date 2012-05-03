@@ -16,4 +16,8 @@ Gem::Specification.new do |gem|
   gem.version       = Rack::PrettyJson::VERSION
 
   gem.add_dependency "yajl-ruby", "~> 1.1.0"
+
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "yard"
 end
