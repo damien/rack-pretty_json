@@ -13,5 +13,5 @@ task :testapp do
 end
 
 YARD::Rake::YardocTask.new do |t|
-  t.options = %w(--markup markdown)
+  t.options = %w()
 end
