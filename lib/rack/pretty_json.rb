@@ -1,4 +1,4 @@
-require "yajl"
+require "multi_json"
 require "rack"
 require "rack/pretty_json/version"
 
@@ -60,18 +60,8 @@ module Rack
     # @param [String] body a valid JSON string
     # @return #each
     def make_pretty!(body)
-      # Convert the response body into a StringIO
-      json = StringIO.new
-      body.each { |line| json << line }
-      json.rewind
-
-      # Stream our raw data through the parser
-      data = Yajl::Parser.parse(json, :pretty => true)
-      pretty_json = StringIO.new
-      Yajl::Encoder.encode(data, pretty_json, :pretty => true)
-      pretty_json.rewind
-
-      pretty_json
+      data = MultiJson.load(json)
+      MultiJson.dump(data, :pretty => true)
     end
 
   end
