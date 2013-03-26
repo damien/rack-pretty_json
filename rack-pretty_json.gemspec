@@ -18,8 +18,9 @@ Gem::Specification.new do |gem|
   gem.add_dependency "rack", "~> 1.5.2"
   gem.add_dependency "multi_json", "~> 1.7.2"
 
+  gem.add_development_dependency "rack-test"
   gem.add_development_dependency "rake"
+  gem.add_development_dependency "redcarpet"
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "yard"
-  gem.add_development_dependency "redcarpet"
 end
