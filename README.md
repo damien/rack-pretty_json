@@ -1,5 +1,7 @@
 # Rack::PrettyJson
 
+[![Build Status](https://travis-ci.org/damien/rack-pretty_json.png)](https://travis-ci.org/damien/rack-pretty_json)
+
 Make your json responses PRETTY!
 
 ## Installation
