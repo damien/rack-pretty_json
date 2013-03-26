@@ -1,0 +1,13 @@
+language: ruby
+script: rake spec
+
+branches:
+  only: master
+
+rvm:
+  - "1.9.3"
+  - jruby-19mode
+
+notifications:
+  email:
+    - damien+rack-pretty_json@mindglob.com
