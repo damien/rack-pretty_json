@@ -1,3 +1,4 @@
+require "stringio"
 require "multi_json"
 require "rack"
 require "rack/pretty_json/version"
@@ -29,7 +30,10 @@ module Rack
         # - pretty json format has been requested
         # - we're in development mode
         if always_process? || requsted_pretty_version?(query_hash) || development?
-          body = make_pretty!(body)
+          body_io = ::StringIO.new
+          body.each { |line| body_io << line }
+
+          body = ::StringIO.new make_pretty!(body_io.string)
         end
       end
 
@@ -60,7 +64,7 @@ module Rack
     # @param [String] body a valid JSON string
     # @return #each
     def make_pretty!(body)
-      data = MultiJson.load(json)
+      data = MultiJson.load(body)
       MultiJson.dump(data, :pretty => true)
     end
 
