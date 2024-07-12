@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Rack::PrettyJson::VERSION
 
-  gem.add_dependency "rack", "~> 1.5.2"
+  gem.add_dependency "rack", ">= 1.5.2", "< 3.2.0"
   gem.add_dependency "multi_json", "~> 1.7.2"
 
   gem.add_development_dependency "rack-test"
